@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--  META TAGS  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/inpost-favicon.png">
+    <title>InPost - Locker Finder</title>
+
+
+    <!--  BULMA CSS  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!--  FONTAWESOME ICONS  -->
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"> -->
+    <script src="https://kit.fontawesome.com/d04c685fb0.js" crossorigin="anonymous"></script>    
+    <!--  STYLESHEET  -->
+    <link rel="stylesheet" href="./styles.css">
+    <!--  JAVASCRIPT - BARCODE SCANNER LIBRARY -->
+    <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
+    <!--  JAVASCRIPT  -->
+    <script type="text/javascript" src="./script.js"></script>
+
+
+
+</head>
+
+<body style="background-color: #FFFFF">
+
+    <!-- NAV BAR -->
+
+    <nav style="background-color: #FFCB04;" class="navbar" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://google.com/">
+                <h1 class="h1-nav-home">
+                    InPost Tools  -  Locker Finder
+                </h1>
+            </a>
+        </div> <!-- navbar-brand -->
+
+    </nav>
+
+    <div class="holder">
+        <div class="noti_1">
+
+            <!--  NOTICE  -->
+            <div class="notification is-danger">
+                <span class="bold">Notice: </span>Website is still in Development and is a Pet-Project - Please be patient.
+            </div>
+
+
+            <!--  Locker Lookup  -->
+
+            <label class="label" style="color: black;">Locker Lookup:</label>
+
+            <div class="columns is-mobile">
+                <div class="column is-half">
+                    <input id="textInput" class="input-placeholder input" type="code" placeholder="e.g. TS18 3SE">
+                </div>
+                <div style="display: flex;" class="column is-half">
+
+                    <button id="submitBtn" class="button is-info" onclick="submitText()"><i class="fa fa-search"></i>&ensp;&ensp;Search</button>
+                    <button id="reloadBtn" class="button is-danger" onclick="reloadPage()"><i class="fa fa-undo"></i></button>
+
+                </div>
+            </div>
+
+            <!--  Fail Messages -->
+
+            <article class="invis message is-danger" id="failMsg2">
+                <div class="message-header">
+                    <p>ERROR</p>
+                </div>
+                <div id="fail-text2" class="message-body">
+                    This Postcode does not exist
+                </div>
+            </article>
+            <div id="outputDiv">
+
+            </div>
+
+        </div>
+    </div> <!-- Holder - Main -->
+
+
+  <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Welcome to InPost Tools, a passion project of mine created to keep my programming skills fresh and help anyone who loves InPost. Here, you can easily track parcels (Work in Progress), locate lockers, calculate shipping costs (Work in Progress), and more. Whether you're a regular user of InPost or just looking for some handy tools, I hope you'll find this site useful. Dive in and enjoy!
+
+</p></p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Tools</h6>
+            <ul class="footer-links">
+              <li><a href="/">Locker Finder</a></li>
+              <li><a href="/">...</a></li>
+              <li><a href="/">...</a></li>
+              <li><a href="/">...</a></li>
+              <li><a href="/">...</a></li>
+              <li><a href="/">...</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by 
+         <a href="#">SamJones04</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+   
+</body>
+
+</html>
